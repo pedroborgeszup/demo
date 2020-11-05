@@ -16,7 +16,7 @@ jobs:
 
       -
         name: Build with Maven
-        run: mvn -B clean install
+        run: mvn -B package --file pom.xml
 
       -
         name: Set up QEMU
