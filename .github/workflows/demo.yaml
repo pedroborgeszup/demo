@@ -47,6 +47,5 @@ jobs:
           IMAGE: demo
           IMAGE_TAG: ${{ steps.get_version.outputs.VERSION }}
         run: |
-          cd demo
           docker build -t $USER/$IMAGE:$IMAGE_TAG .
           docker push $USER/$IMAGE:$IMAGE_TAG
