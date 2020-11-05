@@ -47,4 +47,4 @@ jobs:
           IMAGE_TAG: ${{ steps.get_version.outputs.VERSION }}
         with:
           push: true
-          tags: $IMAGE_TAG
+          tags: pborges11/demo:latest
