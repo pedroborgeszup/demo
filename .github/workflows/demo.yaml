@@ -44,7 +44,9 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         env:
+          USER: ${{ secrets.DOCKERHUB_USERNAME }}
+          IMAGE: demo
           IMAGE_TAG: ${{ steps.get_version.outputs.VERSION }}
-        with:
-          push: true
-          tags: pborges11/demo:latest
+        run: |
+          docker build -t $USER/$IMAGE:$IMAGE_TAG .
+          docker push $USER/$IMAGE:$IMAGE_TAG
