@@ -2,7 +2,7 @@ name: demo
 
 on:
   push:
-    branches: [ release-darwin-* ]
+    branches: main
 
 jobs:
   main:
