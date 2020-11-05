@@ -16,7 +16,6 @@ jobs:
 
       -
         name: Build with Maven
-        working-directory: ./
         run: mvn -B clean install
 
       -
