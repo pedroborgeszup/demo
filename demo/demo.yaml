@@ -1,0 +1,23 @@
+enabled: true
+name: demo
+replicaCount: 1
+appname: demo
+image:
+  repository: demo
+  tag: latest
+  pullPolicy: Always
+service:
+  name: demo
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 8080
+resources:
+  limits:
+    cpu: 128m
+    memory: 128Mi
+  requests:
+    cpu: 64m
+    memory: 64Mi
+sidecarIstio:
+  enabled: true
