@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  { { - if .Values.deploymentName } }
-  name: { { .Values.deploymentName } }
-  { { - else } }
-  name: { { .Release.Name } }
-  { { - end } }
+  {{ - if .Values.deploymentName }}
+  name: {{ .Values.deploymentName }}
+  {{ - else }}
+  name: {{ .Release.Name }}
+  {{ - end }}
   namespace: {{ .Release.Namespace }}
   labels:
     app: {{ .Values.appname }}
