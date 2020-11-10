@@ -31,6 +31,7 @@ spec:
         version: {{ .Release.Name }}
         component: {{ .Values.component }}
         tag: {{ .Values.tag }}
+        circleId: {{ .Values.circleId }}
     spec:
       containers:
         - name: {{ .Values.name }}
